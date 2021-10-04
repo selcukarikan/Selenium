@@ -2,6 +2,7 @@ package tests.day01;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import sun.awt.windows.ThemeReader;
 
 public class C01_ErsteTest {
     public static void main(String[] args) throws InterruptedException {
@@ -17,6 +18,14 @@ public class C01_ErsteTest {
         driver.navigate().to("http://www.youtube.com/");
         Thread.sleep(2000);
         driver.navigate().back();
+        Thread.sleep(2000);
+
+        driver.navigate().forward();
+        Thread.sleep(3000);
+
+        driver.navigate().refresh();
+
+       // driver.quit(); Acik olan tum browserlari kapatir , close ise sadece  1 browser kapatir
         driver.close();
     }
 }
